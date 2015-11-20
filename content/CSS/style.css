@@ -1,0 +1,103 @@
+﻿#idTable {
+    position: relative;
+    width: 95%;
+    top: 70px;
+    border: double;
+    table-layout:auto;
+    margin:auto;
+    padding:1px;
+    
+
+    overflow-y:auto;
+}
+
+    #idTable th {
+        border-left: dashed;
+        padding: 5px;
+        text-align: center;
+    }
+
+    #idTable td {
+        border-top: solid;
+        border-left: solid;
+        padding: 5px;
+        text-align: left;
+    }
+
+
+.clHeader {
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    padding: 5px;
+    background-color: green;
+    text-align: center;
+    border-bottom: groove;
+    width:100%;
+}
+
+.clLinks {
+    position: absolute;
+    padding: 5px;
+    top: 65px;
+    left: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    background-color: lightgreen;
+    border-top: groove;
+    border-right: groove;
+}
+#idButtonArea 
+{
+    background-color:lightgreen;
+    position:absolute;
+    bottom:10px;
+    height:40px;
+    width:100%;
+}
+
+#idEingabemaske 
+{
+    position:relative;
+    top:70px;
+    left:0px;
+    
+}
+#idProjektbutton 
+{
+    position:relative;
+    top:75px;
+}
+
+label {
+    text-align: left;
+}
+
+input {
+    background-color: lightgray;
+    justify-content: center;
+}
+
+a, a:visited {
+    color: black;
+    border: 2px solid;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:10px;
+    margin: 1px 6px;
+    padding: 1px 6px;
+    text-decoration:none;
+    background-color: ButtonFace;
+    border-collapse:collapse;
+    border-radius:1px;
+}
+#idTable tr.clSelected
+{
+    background-color:blue;
+    color:white;
+}

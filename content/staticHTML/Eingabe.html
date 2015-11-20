@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" /> 
+    <title>Neues Projekt</title>
+    <style>
+        @import "CSS/style.css";
+    </style>
+</head>
+<body>
+    <h1 class="clHeader">Neues Projekt</h1>
+    <a href="/projektdaten">zu den Projekte</a>
+  
+    <form action="/new" method="post">
+
+            <label>Bezeichnung</label><br />
+            <input type="text" name="PName" id="PName" /> <br />
+
+            <label>ID</label><br />
+            <input type="text" name="PID" id="PID" /> <br />
+
+            <label>Nummer</label><br />
+            <input type="text" name="PNr" id="PNr" /> <br />
+
+            <label>Beschreibung</label><br />
+            <input type="text" name="PDesc" id="PDesc" /> <br />
+
+            <label>Bearbeitungszeitraum</label><br />
+            <input type="text" name="PTime" id="PTime" /> <br />
+
+            <label>Budget</label><br />
+            <input type="text" name="PMoney" id="PMoney" /> <br />
+
+            <label>ID des Kunden</label><br />
+            <input type="text" name="PIDK" id="PIDK" /> <br />
+
+            <label>erfasste Aufwendungen je Woche </label><br />
+            <input type="text" name="PWeek" id="PWeek" /> <br />
+
+            <input type="submit" value="Speichern" /> <br />
+
+        </form>
+    <form action="/delete" method="post">
+        <label>Löschen(Zu Test Zwecken)</label>
+        <input type="text" name="DID" id="DID" /> <br />
+        <input type="submit" value="Löschen" /> <br />
+    </form>
+
+
+</body>
+</html>
