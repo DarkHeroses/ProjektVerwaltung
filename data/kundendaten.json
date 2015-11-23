@@ -2,15 +2,29 @@
   {
     "Ansprechpartner": "Beispiel ",
     "Bezeichnung": "Beispiel ",
-    "Id": "BeispielID",
+    "Id": "Beispiel",
     "Nummer": "Beispiel ",
     "Ort": "Beispiel "
   },
   {
-    "Bezeichnung": "Best Customer Evvar",
-    "Nummer": "bwugep",
-    "Id": "ID12",
-    "Ort": "wv\u00fctoub",
-    "Ansprechpartner": "buo\u00fcwvg"
+    "Id": "K1",
+    "Nummer": "1",
+    "Bezeichnung": "Das ist Kunde 1",
+    "Ansprechpartner": "Ansprechpartner1",
+    "Ort": "Ort1"
+  },
+  {
+    "Id": "K2",
+    "Nummer": "2",
+    "Bezeichnung": "Das ist Kunde 2",
+    "Ansprechpartner": "Ansprechpartner2",
+    "Ort": "Ort2"
+  },
+  {
+    "Id": "K3",
+    "Nummer": "3",
+    "Bezeichnung": "Das ist Kunde 3",
+    "Ansprechpartner": "Ansprechpartner3",
+    "Ort": "Ort3"
   }
 ]

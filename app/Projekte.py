@@ -10,7 +10,7 @@ import os
 class Projekte_cl(object):
 #---------------------------------------
     css_addr="/Content/CSS/style.css"
-    frame=['PName','PID','PNr','PDesc','PTime','PMoney','PIDK','PWeek']
+    frame=['PID','PName','PNr','PDesc','PTime','PMoney','PIDK','PWeek']
     framename=['Id','Bezeichnung','Nummer','Beschreibung','Bearbeitungszeitraum','Budget','Id des Kunden','erfasste Aufwendungen je Woche']
 
     #-------------------------------------
@@ -112,15 +112,17 @@ class Projekte_cl(object):
                     print("FOUND!!!!!!!!!:"+dict_i[entry_i])
                     dict_in=data.index(dict_i)
                     found=True
-                    for i in range(len(self.frame)):
-                        data[dict_in][self.framename[i]]=kwargs[self.frame[i]]
-                    json_e =open('data/projektdaten.json','w')
-                    json.dump(data,json_e)
-                    json_e.close()
                     break  
                     
-
-
+        if (found==True):
+           for i in range(len(self.frame)):
+                data[dict_in][self.framename[i]]=kwargs[self.frame[i]]
+           json_e =open('data/projektdaten.json','w')
+           json.dump(data,json_e)
+           json_e.close()
+        else:
+           error_s="Kunden mit ID: "+ kwargs["PID"] +" nicht gefunden!"
+           raise cherrypy.HTTPError(404,error_s)
         return self.daten()
     edit_data.exposed=True
 
@@ -145,7 +147,7 @@ class Projekte_cl(object):
         if found ==True:
             data.pop(dict_del)
         else:
-            error_s="Projekt mit ID: "+ DID +" nicht gefunden!"
+            error_s="Projekt mit ID: "+ kwargs["PID"] +" nicht gefunden!"
             raise cherrypy.HTTPError(404,error_s)
         
                     
@@ -153,7 +155,7 @@ class Projekte_cl(object):
         json.dump(data,json_e)
 
         json_e.close()
-        return self.projektdaten()
+        return self.daten()
     delete.exposed=True    
 
    

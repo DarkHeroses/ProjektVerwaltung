@@ -12,8 +12,8 @@
     <h1 class="clHeader">Neues Projekt</h1>
      
     <form action="/${typ}/new" method="post" id="idEingabemaske">
-		
-			%for i in range(frame_size) :
+
+			%for i in range(frame_size):
 				<label>${framename[i]}</label></br>
 				<input type="text" name="${loop.cycle(frame[i])}" id="${loop.cycle(frame[i])}" required /> </br>
 			%endfor
@@ -22,7 +22,7 @@
       </form>
 	  <div class="clMenu">
 	  </br>
-		 <a id="idProjektbutton" href="/${typ}/daten">zu den Projekte</a>
+		 <a id="idProjektbutton" href="/${typ}/daten">zu den ${typ}</a>
 	  </br>
 	  </div>
 </body>

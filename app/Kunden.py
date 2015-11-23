@@ -84,7 +84,7 @@ class Kunden_cl(object):
             mytemplate = Template(filename='Templates\eingabe_detail_edit.tpl')
             return mytemplate.render(typ='Kunden',framename=self.framename,frame=self.frame,frame_size=len(self.frame),css_addr=self.css_addr,dict_ed=dict_ed)
         else:
-            error_s="Kunden mit ID: "+ DID +" nicht gefunden!"
+            error_s="Kunden mit ID: "+ kwargs["PID"] +" nicht gefunden!"
             raise cherrypy.HTTPError(404,error_s)
 
     
@@ -106,14 +106,17 @@ class Kunden_cl(object):
                     print("FOUND!!!!!!!!!:"+dict_i[entry_i])
                     dict_in=data.index(dict_i)
                     found=True
-                    for i in range(len(self.frame)):
-                        data[dict_in][self.framename[i]]=kwargs[self.frame[i]]
-                    json_e =open('data/kundendaten.json','w')
-                    json.dump(data,json_e)
-                    json_e.close()
                     break  
                     
-
+        if (found==True):
+           for i in range(len(self.frame)):
+                data[dict_in][self.framename[i]]=kwargs[self.frame[i]]
+           json_e =open('data/kundendaten.json','w')
+           json.dump(data,json_e)
+           json_e.close()
+        else:
+           error_s="Kunden mit ID: "+ kwargs["PID"] +" nicht gefunden!"
+           raise cherrypy.HTTPError(404,error_s)
 
         return self.daten()
     edit_data.exposed=True

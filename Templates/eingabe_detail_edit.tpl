@@ -12,8 +12,9 @@
     <h1 class="clHeader">Projekt editieren</h1>
      
     <form action="/${typ}/edit_data" method="post" id="idEingabemaske">
-		
-			%for i in range(frame_size) :
+				<label>Id</label></br>
+				<input type="text" name="PID" id="PID"	value="${dict_ed["Id"]}" disabled /> </br>
+			%for i in range(1,frame_size) :
 				<label>${framename[i]}</label></br>
 				<input type="text" name="${loop.cycle(frame[i])}" id="${loop.cycle(frame[i])}"	value="${dict_ed[framename[i]]}" required /> </br>
 			%endfor
@@ -22,7 +23,7 @@
       </form>
 	  <div class="clMenu">
 	  </br>
-		 <a id="idProjektbutton" href="/${typ}/daten">zu den Projekte</a>
+		 <a id="idProjektbutton" href="/${typ}/daten">zu den ${typ}</a>
 	  </br>
 	  </div>
 </body>
