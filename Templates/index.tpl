@@ -6,6 +6,7 @@
       <style>
         @import url(${css_addr});
     </style>
+	<title>Projektmanagement</title>
     
 
 </head>

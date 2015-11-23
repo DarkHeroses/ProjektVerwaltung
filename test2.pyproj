@@ -33,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="content\CSS\style.css" />
+    <Content Include="content\Javascript\eingabe_detail_edit.js" />
     <Content Include="content\staticHTML\Eingabe.html" />
     <Content Include="content\staticHTML\index.html" />
     <Content Include="content\Javascript\tabellen_bearbeitung.js" />
@@ -46,7 +47,6 @@
     <Content Include="Templates\eingabe_detail_edit.tpl" />
     <Content Include="Templates\eingabe.tpl" />
     <Content Include="Templates\index.tpl" />
-    <Content Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app" />

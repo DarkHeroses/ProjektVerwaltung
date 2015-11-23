@@ -7,13 +7,14 @@
     <style>
         @import url(${css_addr});
     </style>
+	<script type="text/javascript"  src="/Content/Javascript/eingabe_detail_edit.js"></script>
 </head>
 <body>
     <h1 class="clHeader">Projekt editieren</h1>
      
     <form action="/${typ}/edit_data" method="post" id="idEingabemaske">
 				<label>Id</label></br>
-				<input type="text" name="PID" id="PID"	value="${dict_ed["Id"]}" disabled /> </br>
+				<input type="text" name="PID" id="PID"	value="${dict_ed["Id"]}" readonly/> </br>
 			%for i in range(1,frame_size) :
 				<label>${framename[i]}</label></br>
 				<input type="text" name="${loop.cycle(frame[i])}" id="${loop.cycle(frame[i])}"	value="${dict_ed[framename[i]]}" required /> </br>
