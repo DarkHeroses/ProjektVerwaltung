@@ -43,6 +43,7 @@
     <Content Include="Templates\daten.tpl">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Templates\eingabe_detail_edit.tpl" />
     <Content Include="Templates\eingabe.tpl" />
     <Content Include="Templates\index.tpl" />
     <Content Include="TODO.txt" />

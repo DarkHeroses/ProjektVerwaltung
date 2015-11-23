@@ -19,7 +19,7 @@ class Kunden_cl(object):
         data = json.load(json_f, object_pairs_hook=OrderedDict)
         json_f.close()
           
-        typ_s = 'Kundendaten'
+        typ_s = 'kundendaten'
                
         mytemplate = Template(filename='Templates\daten.tpl')
         
@@ -64,6 +64,60 @@ class Kunden_cl(object):
 
     new.exposed=True 
 
+        #---------------------------------------------
+    def edit(self,DID):
+    #---------------------------------------------
+        json_f = open('data/kundendaten.json')	
+        data = json.load(json_f, object_pairs_hook=OrderedDict)
+        json_f.close()
+
+        found = False
+        dict_ed={}
+        for dict_i in data:
+            for entry_i in dict_i:
+                if  dict_i[entry_i]==DID:
+                    print("FOUND!!!!!!!!!")
+                    dict_ed=dict_i
+                    found=True
+                    
+        if found ==True:
+            mytemplate = Template(filename='Templates\eingabe_detail_edit.tpl')
+            return mytemplate.render(typ='Kunden',framename=self.framename,frame=self.frame,frame_size=len(self.frame),css_addr=self.css_addr,dict_ed=dict_ed)
+        else:
+            error_s="Kunden mit ID: "+ DID +" nicht gefunden!"
+            raise cherrypy.HTTPError(404,error_s)
+
+    
+    edit.exposed=True
+
+    #---------------------------------------------
+    def edit_data(self,**kwargs):
+    #---------------------------------------------
+        json_f = open('data/kundendaten.json')	
+        data = json.load(json_f, object_pairs_hook=OrderedDict)
+        json_f.close() 
+        found = False
+        
+        dict_in=0
+
+        for dict_i in data:
+            for entry_i in dict_i:
+                if  dict_i[entry_i]==kwargs["PID"]:
+                    print("FOUND!!!!!!!!!:"+dict_i[entry_i])
+                    dict_in=data.index(dict_i)
+                    found=True
+                    for i in range(len(self.frame)):
+                        data[dict_in][self.framename[i]]=kwargs[self.frame[i]]
+                    json_e =open('data/kundendaten.json','w')
+                    json.dump(data,json_e)
+                    json_e.close()
+                    break  
+                    
+
+
+        return self.daten()
+    edit_data.exposed=True
+
     #---------------------------------------------    
     def delete(self, DID):
     #---------------------------------------------
@@ -85,7 +139,7 @@ class Kunden_cl(object):
         if found ==True:
             data.pop(dict_del)
         else:
-            error_s="Projekt mit ID: "+ DID +" nicht gefunden1"
+            error_s="Kunden mit ID: "+ DID +" nicht gefunden1"
             raise cherrypy.HTTPError(404,error_s)
         
                     

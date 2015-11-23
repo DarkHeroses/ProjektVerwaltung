@@ -1,1 +1,16 @@
-[{"Bezeichnung": "Beispiel ", "Nummer": "Beispiel ", "Id": "Beispiel ID", "Ort": "Beispiel ", "Ansprechpartner": "Beispiel "}]
+[
+  {
+    "Ansprechpartner": "Beispiel ",
+    "Bezeichnung": "Beispiel ",
+    "Id": "BeispielID",
+    "Nummer": "Beispiel ",
+    "Ort": "Beispiel "
+  },
+  {
+    "Bezeichnung": "Best Customer Evvar",
+    "Nummer": "bwugep",
+    "Id": "ID12",
+    "Ort": "wv\u00fctoub",
+    "Ansprechpartner": "buo\u00fcwvg"
+  }
+]

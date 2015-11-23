@@ -26,7 +26,7 @@
                 else if ((event_opl.target.href.indexOf('/Projekte/edit') > 0) || (event_opl.target.href.indexOf('/Kunden/edit') > 0)) {
                     element_o = document.querySelector(".clSelected");
                     if (element_o != null) {
-                        path_s += "/" + element_o.id.substr(1);
+                        path_s += "/" + element_o.id.substr(0);
                         do_b = true;
                     } else {
                         alert("Wählen Sie bitte einen Eintrag in der Tabelle aus!");

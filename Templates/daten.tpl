@@ -35,6 +35,7 @@
 		<div class="clButtons" id="idButtonArea">
 		<a href="/index">zurueck zur Startseite</a>
 		<a href="/${typ}/eingabe">${typ} hinzufuengen</a>
+		<a href="/${typ}/edit">${typ} editieren</a>
 		<a href="/${typ}/delete">${typ} entfernen</a>
 		
 		
