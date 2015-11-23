@@ -19,7 +19,7 @@ class Kunden_cl(object):
         data = json.load(json_f, object_pairs_hook=OrderedDict)
         json_f.close()
           
-        typ_s = 'kundendaten'
+        typ_s = 'Kundendaten'
                
         mytemplate = Template(filename='Templates\daten.tpl')
         
