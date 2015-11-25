@@ -1,1 +1,42 @@
-[{"Bearbeitungszeitraum": "1.1.2015-30.1.2015", "Beschreibung": "Das ist Projekt 1", "Bezeichnung": "Projekt1", "Budget": "1000", "erfasste Aufwendungen je Woche": "1Std", "Id": "ID1", "Id des Kunden": "KID1", "Nummer": "1"}, {"Id": "ID2", "Nummer": "2", "Bezeichnung": "Projekt2", "Beschreibung": "Das ist Projekt 2", "Bearbeitungszeitraum": "2.1.2015-30.1.2015", "Budget": "2000", "Id des Kunden": "KID2", "erfasste Aufwendungen je Woche": "2Std"}, {"Bearbeitungszeitraum": "3.1.2015-30.1.2015", "Beschreibung": "Das ist Projekt 3", "Bezeichnung": "Projekt3", "Budget": "3000", "Id": "ID3", "Id des Kunden": "KID3", "Nummer": "3", "erfasste Aufwendungen je Woche": "3Std"}, {"Budget": "500000", "Beschreibung": "Awesome", "Bezeichnung": "Project X", "Bearbeitungszeitraum": "1.1.-23.1", "Nummer": "7", "Id": "ID12", "erfasste Aufwendungen je Woche": "37", "Id des Kunden": "KID16"}]
+[
+  {
+    "Bearbeitungszeitraum": "1.1.2015-30.1.2015",
+    "Beschreibung": "Das ist Projekt 1",
+    "Bezeichnung": "Projekt1",
+    "Budget": "1000",
+    "erfasste Aufwendungen je Woche": "1Std",
+    "Id": "ID1",
+    "Id des Kunden": "KID1",
+    "Nummer": "1"
+  },
+  {
+    "Id": "ID2",
+    "Nummer": "2",
+    "Bezeichnung": "Projekt2",
+    "Beschreibung": "Das ist Projekt 2",
+    "Bearbeitungszeitraum": "2.1.2015-30.1.2015",
+    "Budget": "2000",
+    "Id des Kunden": "KID2",
+    "erfasste Aufwendungen je Woche": "2Std"
+  },
+  {
+    "Bearbeitungszeitraum": "3.1.2015-30.1.2015",
+    "Beschreibung": "Das ist Projekt 3",
+    "Bezeichnung": "Projekt3",
+    "Budget": "3000",
+    "Id": "ID3",
+    "Id des Kunden": "KID3",
+    "Nummer": "3",
+    "erfasste Aufwendungen je Woche": "3Std"
+  },
+  {
+    "Budget": "500000",
+    "Beschreibung": "Awesome",
+    "Bezeichnung": "Project X",
+    "Bearbeitungszeitraum": "1.1.-23.1",
+    "Nummer": "7",
+    "Id": "ID12",
+    "erfasste Aufwendungen je Woche": "37Std",
+    "Id des Kunden": "KID4"
+  }
+]
