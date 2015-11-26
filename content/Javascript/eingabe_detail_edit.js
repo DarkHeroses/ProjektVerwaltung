@@ -1,4 +1,4 @@
-﻿var g_FormContentOrg_o = {
+var g_FormContentOrg_o = {
     'PID':'',
     'PName': '',
     'PNr': '',
@@ -36,7 +36,7 @@ function isModified_p() {
 
 window.onload = function () {
 
-   
+
    storeFormContent_p();
 
 

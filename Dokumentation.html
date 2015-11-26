@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="projektverwaltung">Projektverwaltung</h1>
+<h2 id="allgemeine-beschreibung-der-lösung">Allgemeine Beschreibung der Lösung</h2>
+<p>Das Program dient der Verwaltung von <strong>Projekten und Kunden</strong>. Dabei können Kunden dynamisch <em>erstellt</em> und <em>bearbeitet</em> und ebenfalls auch <em>gelöscht</em> werden.</p>
+<hr />
+<h2 id="komponenten">Komponenten</h2>
+<h3 id="application.py">application.py</h3>
+<p>Diese Datei beinhaltet die Klasse <strong>Application_cl</strong>. Die Klasse dient Hauptsächlich der <em>Einbindung</em> der Klassen <strong>Projekt_cl</strong> und <strong>Kunden_cl</strong>. Desweiteren befindet sich hier der Aufruf der <strong>index(self)</strong> Funktion. Diese Funktion dient dem Aufruf der <em>Startseite</em>.</p>
+<p>Der Aufruf der Startseite wird durch ein <strong>Mako template: index.tpl</strong> geladen und ausgegeben. Falls eine Adresse Auftritt die nicht behandet wurde, wird ein <strong>404 Fehler</strong> ausgegeben.</p>
+<h3 id="kunden.pyprojekte.py">Kunden.py/Projekte.py</h3>
+<p>In diesen Daten wird Hauptlogik des gesamten Projekts implementiert. Je nach dem ob es Kunden oder Projekte sind werden die passenden Funktionen ausgeführt.</p>
+<h4 id="attribute">Attribute</h4>
+<ul>
+<li><strong>css_addr</strong>:festlegeung des <em>CSS</em> Pfades</li>
+<li><strong>frame</strong>:festlegung der <em>IDs</em> und <em>Name</em> in den generierten Templates.</li>
+<li><strong>framename</strong>: Legt die <em>Keys</em> der gespeicherten <em>Json-Daten</em></li>
+</ul>
+<h4 id="methoden">Methoden</h4>
+<ul>
+<li><h5 id="datenself">daten(self)</h5>
+<ul>
+<li>Bei dieser Funktion werden die gespeicherten <em>Json-Daten</em> gelesen und über das <strong>daten.tpl</strong> ausgegeben.</li>
+</ul></li>
+<li><h5 id="eingabeself">eingabe(self)</h5>
+<ul>
+<li>Bei dieser Funktion wird das <strong>Eingabe.tpl</strong> geladen.</li>
+</ul></li>
+<li><h5 id="newselfkwargs">new(self,**kwargs)</h5>
+<ul>
+<li>Bei dieser Funktion werden vom, <em>User</em> eingebenen Daten verarbeitet. Die Verarbeitung erfolgt durch das Laden der bereits vorhandenen <em>Json-Daten</em>. Dabei wird geprüft ob die <em>Json-Datei</em> leer ist oder nicht. Falls die <em>Json-Datei</em> leer ist wird die Datei einfach geschlossen. Falls die <em>Json-Datei</em> bereits gespeicherte Daten enthält werden die Daten gelesen. Daraufhin werden die vom <em>User</em> eingegeben Daten in einen passenden Datentypen gespeichert. Dieser wird dann an die aus den <em>Json-Dateien</em> gelesenen Daten angehängt. Dann wird die Datei die zuvor ausgelesen wurde, wieder geladen und wird mit den aktualisierten Daten überschrieben und dann geschlossen. Zum Schluss wird die <strong>daten(self)</strong> Funktion aufgerufen.</li>
+</ul></li>
+<li><h5 id="editselfdid">edit(self,DID)</h5>
+<ul>
+<li>Bei dieser Funktion werden die vom <em>User</em> ausgewählten Daten werden zum editieren zur Verfügung gestellt. Die Verarbeitung erfolgt durch das Laden der vorhandenen <em>Json-Daten</em>. Dann werden diese Daten gelesen und der <em>Ausgewählte Eintrag</em> rausgesucht. Der rausgesuchte Eintrag wird mit den ausgelesenen Daten an das Template <strong>eingabe_detail_edit.tpl</strong> übergeben. Falls der Eintrag, durch Umstände, nicht gefunden wird gibt der ein <strong>404 Fehler</strong> aus.</li>
+</ul></li>
+<li><h5 id="edit_dataselfkwargs">edit_data(self,**kwargs)</h5>
+<ul>
+<li>Bei dieser Funktion werden die vom <em>User</em> ausgewählten Daten editiert. Die Verarbeitung erfolgt durch das Laden der vorhandenen <em>Json-Daten</em>. Dann werden diese Daten gelesen und der <em>übergebene Eintrag</em> rausgesucht. Daraufhin wird der <em>rausgesuchte Eintrag</em> mit den <em>übergegebenen Daten</em> ersetzt und wird mit den aktualisierten Daten überschrieben und dann geschlossen. Falls der Eintrag, durch Umstände, nicht gefunden wird gibt der ein <strong>404 Fehler</strong> aus.</li>
+</ul></li>
+<li><h5 id="deleteselfdid">delete(self,DID)</h5>
+<ul>
+<li>Bei dieser Funktion werden die vom <em>User</em> ausgewählten Daten gelöscht. Die Verarbeitung erfolgt durch das Laden der vorhandenen <em>Json-Daten</em>. Dann werden diese Daten gelesen und der <em>Ausgewählte Eintrag</em> rausgesucht. Daraufhin wird der <em>gefunden Eintrag</em> aus den <em>ausgelesenen Daten</em> entferntund wird mit den aktualisierten Daten überschrieben und dann geschlossen. Falls der Eintrag, durch Umstände, nicht gefunden wird gibt der ein <strong>404 Fehler</strong> aus.</li>
+</ul></li>
+<li><h5 id="defaultself-arglist-kwargs">default(self, *arglist, **kwargs)</h5>
+<ul>
+<li>Falls eine Adresse Auftritt die nicht behandet wurde, wird ein <strong>404 Fehler</strong> ausgegeben.</li>
+</ul></li>
+</ul>
+<h3 id="templates">Templates</h3>
+<ul>
+<li><h4 id="index.tpl">index.tpl</h4>
+<ul>
+<li>Die Startseite, von wo man auf die <strong>Projekt - und Kundendaten</strong> zugreifen kann.</li>
+</ul></li>
+<li><h4 id="daten.tpl">daten.tpl</h4>
+<ul>
+<li>Auf dieser Seite werden alle bereits gespeicherten Daten dargestellt. Von dieser Seite kommt auf <strong>Projekte/Kunden hinzufügen</strong>, <strong>Projekte/Kunden editieren</strong> und <strong>Projekte/Kunden löschen</strong>.</li>
+</ul></li>
+<li><h4 id="eingabe.tpl">eingabe.tpl</h4>
+<ul>
+<li>Diese Seite bietet eine Eingabemaske für <strong>Projekt- oder Kundendaten</strong>, um diese dem System hinzuzufügen.</li>
+</ul></li>
+<li><h4 id="eingabe_detail_edit.tpl">eingabe_detail_edit.tpl</h4>
+<ul>
+<li>Diese Seite biete ein Eingabemaske zum Editieren von <strong>Projekt- oder Kundendaten</strong>.</li>
+</ul></li>
+</ul>
+<h3 id="tabellen_bearbeitung.js">tabellen_bearbeitung.js</h3>
+<p>Hier ist die Logik zur <em>Auswahl des Tabellen Einträge</em> und Ihre weitergabe implementiert. Es wird zu Beginn überprüft ob bereits ein Element ausgewählt wurde. Wenn ja, wird es zurück gesetzt und ein neues Element als Selected markiert.</p>
+<p>Bei der Weitergabe der Daten wird das Aktuell ausgewälte Element genommen und davon die <em>ID</em> weitergeleitet um das in den Server funktionen verarbeitet zu werden.</p>
+<h3 id="eingabe_detail_edit.js">eingabe_detail_edit.js</h3>
+<p>Hier ist die Logik zur weitegabe der Daten, welche editiert wurden implementiert. Dabei werden die Daten zwischen gespeichert Überprüft und dann an den Server Weitergegeben.</p>
+<h3 id="json-dateien">Json-Dateien</h3>
+<h3 id="kunden-projektdaten.json">Kunden-&amp;Projektdaten.json</h3>
+<p>Dort sind die <em>Projekt- und Kundendaten</em> gespeichert.</p>
+</body>
+</html>
