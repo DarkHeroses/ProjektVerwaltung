@@ -5,6 +5,29 @@ from collections import OrderedDict
 from mako.template import Template
 import os
 
+#-------------------------------------
+def zaehlen():
+#-------------------------------------
+    json_f = open('data/projektdaten.json')	
+    data = json.load(json_f, object_pairs_hook=OrderedDict)
+    json_f.close()
+    count=1
+    
+    while(True):
+        found=False
+        for dict_i in data:
+            for entry_i in dict_i:
+                if  dict_i[entry_i]==("ID"+str(count)):
+                    found=True
+
+            
+
+        if found==True:
+            count=count+1
+        else:
+            break
+        
+    return count
 
 #---------------------------------------
 class Projekte_cl(object):
@@ -12,7 +35,9 @@ class Projekte_cl(object):
     css_addr="/Content/CSS/style.css"
     frame=['PID','PName','PNr','PDesc','PTime','PMoney','PIDK','PWeek']
     framename=['Id','Bezeichnung','Nummer','Beschreibung','Bearbeitungszeitraum','Budget','Id des Kunden','erfasste Aufwendungen je Woche']
+   
 
+    
     #-------------------------------------
     def eingabe(self):
     #-------------------------------------
@@ -56,8 +81,10 @@ class Projekte_cl(object):
         json_f.close()
 
         eintrag={}
+        
+        eintrag.update({self.framename[0]:"ID"+str(zaehlen())})
 
-        for i in range(len(self.frame)):
+        for i in range(1,len(self.frame)):
             eintrag.update({self.framename[i]:kwargs[self.frame[i]]})
        
         data.append(eintrag)

@@ -13,7 +13,7 @@
      
     <form action="/${typ}/new" method="post" id="idEingabemaske">
 
-			%for i in range(frame_size):
+			%for i in range(1,frame_size):
 				<label>${framename[i]}</label></br>
 				<input type="text" name="${loop.cycle(frame[i])}" id="${loop.cycle(frame[i])}" required /> </br>
 			%endfor
