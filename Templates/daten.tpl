@@ -32,7 +32,9 @@
 		<a href="/${typ}/eingabe">${typ} hinzufuengen</a>
 		<a href="/${typ}/edit">${typ} editieren</a>
 		<a href="/${typ}/delete">${typ} entfernen</a>
-		
+		%if (typ=="Projekte"):
+			<a href="/${typ}/aufwendungen/show">Woechentliche Aufwendungen</a>
+		%endif
 		
 		</div>
 	</body>		

@@ -3,6 +3,7 @@ import cherrypy
 import json
 from collections import OrderedDict
 from mako.template import Template
+from app import Aufwendungen
 import os
 
 #-------------------------------------
@@ -37,7 +38,13 @@ class Projekte_cl(object):
     framename=['Id','Bezeichnung','Nummer','Beschreibung','Bearbeitungszeitraum','Budget','Id des Kunden','erfasste Aufwendungen je Woche']
    
 
-    
+    #----------------------------------
+    def __init__(self):
+    #--------------------------------------
+        self.aufwendungen=Aufwendungen.aufwendungen_cl
+        # constructor
+        pass
+
     #-------------------------------------
     def eingabe(self):
     #-------------------------------------
@@ -65,10 +72,7 @@ class Projekte_cl(object):
         
     daten.exposed = True
     
-    
-    
-    
- 
+   
        
     #-------------------------------------
     def new(self,**kwargs):#,PName,PID,PNr,PDesc,PTime,PMoney,PIDK,PWeek):
