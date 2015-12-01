@@ -1,13 +1,13 @@
 [
   {
-    "Id": "K1",
-    "Nummer": "1",
-    "Bezeichnung": "Das ist Kunde 1",
     "Ansprechpartner": "Ansprechpartner1",
+    "Bezeichnung": "Das ist Kunde 1",
+    "Id": "KID1",
+    "Nummer": "1",
     "Ort": "Ort1"
   },
   {
-    "Id": "K2",
+    "Id": "KID2",
     "Nummer": "2",
     "Bezeichnung": "Das ist Kunde 2",
     "Ansprechpartner": "Ansprechpartner2",
@@ -16,7 +16,7 @@
   {
     "Ansprechpartner": "Ansprechpartner3",
     "Bezeichnung": "Das ist Kunde 3",
-    "Id": "K3",
+    "Id": "KID3",
     "Nummer": "3",
     "Ort": "Ort3"
   },
@@ -26,5 +26,12 @@
     "Ort": "Mexico",
     "Bezeichnung": "Megawarenhaus",
     "Nummer": "4711"
+  },
+  {
+    "Nummer": "4711",
+    "Bezeichnung": "Beispiel",
+    "Ort": "Mexico",
+    "Ansprechpartner": "John Doe",
+    "Id": "KID5"
   }
 ]

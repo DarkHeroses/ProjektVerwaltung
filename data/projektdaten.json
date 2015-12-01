@@ -1,33 +1,13 @@
 [
   {
-    "Bearbeitungszeitraum": "1.1.2015-30.1.2015",
-    "Beschreibung": "Das ist Projekt 1",
-    "Bezeichnung": "Projekt1",
-    "Budget": "1000",
-    "erfasste Aufwendungen je Woche": "1Std",
-    "Id": "ID1",
-    "Id des Kunden": "KID1",
-    "Nummer": "1"
-  },
-  {
-    "Id": "ID2",
-    "Nummer": "2",
-    "Bezeichnung": "Projekt2",
-    "Beschreibung": "Das ist Projekt 2",
-    "Bearbeitungszeitraum": "2.1.2015-30.1.2015",
-    "Budget": "2000",
-    "Id des Kunden": "KID2",
-    "erfasste Aufwendungen je Woche": "2Std"
-  },
-  {
     "Bearbeitungszeitraum": "3.1.2015-30.1.2015",
     "Beschreibung": "Das ist Projekt 3",
     "Bezeichnung": "Projekt3",
     "Budget": "3000",
+    "erfasste Aufwendungen je Woche": { "KW1": "12STD" },
     "Id": "ID3",
     "Id des Kunden": "KID3",
-    "Nummer": "3",
-    "erfasste Aufwendungen je Woche": "3Std"
+    "Nummer": "3"
   },
   {
     "Budget": "500000",
@@ -38,5 +18,75 @@
     "Id": "ID12",
     "erfasste Aufwendungen je Woche": "37Std",
     "Id des Kunden": "KID4"
+  },
+  {
+    "Beschreibung": "Baumhaus",
+    "erfasste Aufwendungen je Woche": "qef",
+    "Nummer": "Test3",
+    "Id": "ID5",
+    "Bearbeitungszeitraum": "Beispiel",
+    "Id des Kunden": "Beispiel",
+    "Budget": "Beispiel",
+    "Bezeichnung": "Baum"
+  },
+  {
+    "Budget": "Beispiel",
+    "erfasste Aufwendungen je Woche": "Beispiel",
+    "Beschreibung": "Beispiel",
+    "Nummer": "Beispiel",
+    "Bezeichnung": "Beispiel",
+    "Bearbeitungszeitraum": "Beispiel",
+    "Id": "ID2",
+    "Id des Kunden": "Beispiel"
+  },
+  {
+    "Budget": "Beispiel",
+    "erfasste Aufwendungen je Woche": "wpisg",
+    "Beschreibung": "Test4",
+    "Nummer": "Beispiel",
+    "Bezeichnung": "HALOOOOO!!!!!!!!!",
+    "Bearbeitungszeitraum": "xcvbnm",
+    "Id": "ID4",
+    "Id des Kunden": "Beispiel"
+  },
+  {
+    "Budget": "Test6",
+    "erfasste Aufwendungen je Woche": "Test8",
+    "Beschreibung": "Test4",
+    "Nummer": "Test3",
+    "Bezeichnung": "Baum",
+    "Bearbeitungszeitraum": "Beispiel",
+    "Id": "ID6",
+    "Id des Kunden": "4"
+  },
+  {
+    "Bearbeitungszeitraum": "whr",
+    "Id": "ID7",
+    "Nummer": "hwr",
+    "Beschreibung": "hrw",
+    "erfasste Aufwendungen je Woche": "qhw",
+    "Bezeichnung": "wrh",
+    "Id des Kunden": "qhr",
+    "Budget": "hrq"
+  },
+  {
+    "Bezeichnung": "Beispiel",
+    "Bearbeitungszeitraum": "Beispiel",
+    "Id": "ID1",
+    "Id des Kunden": "Beispiel",
+    "Beschreibung": "Beispiel",
+    "Budget": "Beispiel",
+    "Nummer": "Beispiel",
+    "erfasste Aufwendungen je Woche": "12"
+  },
+  {
+    "Bezeichnung": "TEEEEEST!!",
+    "Bearbeitungszeitraum": "Test5",
+    "Id": "ID8",
+    "Id des Kunden": "ng jhn",
+    "Beschreibung": "Beispiel",
+    "Budget": "Test6",
+    "Nummer": "4711",
+    "erfasste Aufwendungen je Woche": "sg"
   }
 ]
