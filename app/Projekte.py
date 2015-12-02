@@ -35,13 +35,14 @@ class Projekte_cl(object):
 #---------------------------------------
     css_addr="/Content/CSS/style.css"
     frame=['PID','PName','PNr','PDesc','PTime','PMoney','PIDK','PWeek']
-    framename=['Id','Bezeichnung','Nummer','Beschreibung','Bearbeitungszeitraum','Budget','Id des Kunden','erfasste Aufwendungen je Woche']
+    framename=['Id','Bezeichnung','Nummer','Beschreibung','Bearbeitungszeitraum','Budget','Id des Kunden']
    
 
     #----------------------------------
     def __init__(self):
     #--------------------------------------
-        self.aufwendungen=Aufwendungen.aufwendungen_cl
+        self.Aufwendungen=Aufwendungen.aufwendungen_cl()
+        
         # constructor
         pass
 

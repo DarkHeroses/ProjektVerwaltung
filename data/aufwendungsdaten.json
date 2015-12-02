@@ -1,1 +1,34 @@
-[{"Id": "ID3","Woche1": "12STD","Woche2": "8STD"}]
+[
+  {
+    "Id": "ID3",
+    "Woche1": "12Std",
+    "Woche2": "15Std",
+    "Woche3": "16Std",
+    "Woche4": "99Std",
+    "Woche5": "159Std",
+    "Woche6": "14Std",
+    "Woche7": "14Std",
+    "Woche8": "15Std",
+    "Woche9": "99Std"
+  },
+  {
+    "Id": "ID1",
+    "Woche1": "12Std",
+    "Woche2": "8STD"
+  },
+  {
+    "Id": "ID4",
+    "Woche1": "12Std",
+    "Woche2": "8Std",
+    "Woche3": "66Std"
+  },
+  {
+    "Id": "ID8",
+    "Woche1": "12STD"
+  },
+  {
+    "Id": "ID5",
+    "Woche1": "14Std",
+    "Woche2": "14Std"
+  }
+]

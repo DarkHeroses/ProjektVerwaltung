@@ -22,7 +22,18 @@
                 if ((event_opl.target.href.indexOf('/Projekte/eingabe') > 0)||(event_opl.target.href.indexOf('/Kunden/eingabe') > 0)) {
                     do_b = true;
                 }else if(event_opl.target.href.indexOf('/index') > 0)
-                { do_b = true;}
+                { do_b = true; }
+                else if ((event_opl.target.href.indexOf('Projekte/Aufwendungen/show') > 0)) {
+                    element_o = document.querySelector(".clSelected");
+                    if (element_o != null) {
+                        path_s += "/" + element_o.id.substr(0);
+                        do_b = true;
+                    } else 
+                    {
+                        path_s += '_all';
+                        do_b = true;
+                    }
+                }
                 else if ((event_opl.target.href.indexOf('/Projekte/edit') > 0) || (event_opl.target.href.indexOf('/Kunden/edit') > 0)) {
                     element_o = document.querySelector(".clSelected");
                     if (element_o != null) {

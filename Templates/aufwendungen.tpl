@@ -1,22 +1,35 @@
 <!DOCTYPE HTML SYSTEM>
 <html>
 	<head>
-		<title>${typ_s}</title>
+		<title>Aufwendungen je Woche</title>
 
-		<style  type="text/css">
+		<style>
 			@import url(${css_addr});
 		</style>
 
-		<script type="text/javascript"  src="/Content/Javascript/tabellen_bearbeitung.js"></script>
+		
 
 	</head>
 	<body>
-		<h1 class="clHeader">${typ_s}</h1>
-
-		<table id="idTable"><tr>
-		</table>
-
+		<h1 class="clHeader">Aufwendungen je Woche</h1>
+		%for dict_i in dict_list:
+			<table id="idTable">
+				%for i in range(len(dict_i)):
+				<tr>
+					%if i == 0:
+						<th>Id</th><td>${dict_i["Id"]}</td>
+					%else:
+						<th>${i}. Woche</th><td>${dict_i["Woche"+str(i)]}</td>
+					%endif
+				</tr>
+				%endfor
+			</table>
+		%endfor
 		<div class="clButtons" id="idButtonArea">
+		<a href="/index">zurueck zur Startseite</a>
+		%if (len(dict_list) == 1):
+			<a href="/Projekte/Aufwendungen/show_new/${dict_i["Id"]}"> neue Woche hinzufuegen</a>
+		%endif
 		</div>
 	</body>		
 </html>

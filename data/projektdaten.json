@@ -4,7 +4,7 @@
     "Beschreibung": "Das ist Projekt 3",
     "Bezeichnung": "Projekt3",
     "Budget": "3000",
-    "erfasste Aufwendungen je Woche": { "KW1": "12STD" },
+
     "Id": "ID3",
     "Id des Kunden": "KID3",
     "Nummer": "3"
@@ -16,32 +16,30 @@
     "Bearbeitungszeitraum": "1.1.-23.1",
     "Nummer": "7",
     "Id": "ID12",
-    "erfasste Aufwendungen je Woche": "37Std",
+
     "Id des Kunden": "KID4"
   },
   {
+    "Bearbeitungszeitraum": "Beispiel",
     "Beschreibung": "Baumhaus",
-    "erfasste Aufwendungen je Woche": "qef",
-    "Nummer": "Test3",
+    "Bezeichnung": "Baum",
+    "Budget": "Beispiel",
     "Id": "ID5",
-    "Bearbeitungszeitraum": "Beispiel",
     "Id des Kunden": "Beispiel",
-    "Budget": "Beispiel",
-    "Bezeichnung": "Baum"
+    "Nummer": "Test3"
   },
   {
-    "Budget": "Beispiel",
-    "erfasste Aufwendungen je Woche": "Beispiel",
-    "Beschreibung": "Beispiel",
-    "Nummer": "Beispiel",
-    "Bezeichnung": "Beispiel",
     "Bearbeitungszeitraum": "Beispiel",
+    "Beschreibung": "Beispiel",
+    "Bezeichnung": "Beispiel",
+    "Budget": "Beispiel",
     "Id": "ID2",
-    "Id des Kunden": "Beispiel"
+    "Id des Kunden": "Beispiel",
+    "Nummer": "Beispiel"
   },
   {
     "Budget": "Beispiel",
-    "erfasste Aufwendungen je Woche": "wpisg",
+
     "Beschreibung": "Test4",
     "Nummer": "Beispiel",
     "Bezeichnung": "HALOOOOO!!!!!!!!!",
@@ -51,7 +49,7 @@
   },
   {
     "Budget": "Test6",
-    "erfasste Aufwendungen je Woche": "Test8",
+
     "Beschreibung": "Test4",
     "Nummer": "Test3",
     "Bezeichnung": "Baum",
@@ -64,7 +62,7 @@
     "Id": "ID7",
     "Nummer": "hwr",
     "Beschreibung": "hrw",
-    "erfasste Aufwendungen je Woche": "qhw",
+
     "Bezeichnung": "wrh",
     "Id des Kunden": "qhr",
     "Budget": "hrq"
@@ -76,8 +74,8 @@
     "Id des Kunden": "Beispiel",
     "Beschreibung": "Beispiel",
     "Budget": "Beispiel",
-    "Nummer": "Beispiel",
-    "erfasste Aufwendungen je Woche": "12"
+    "Nummer": "Beispiel"
+
   },
   {
     "Bezeichnung": "TEEEEEST!!",
@@ -86,7 +84,7 @@
     "Id des Kunden": "ng jhn",
     "Beschreibung": "Beispiel",
     "Budget": "Test6",
-    "Nummer": "4711",
-    "erfasste Aufwendungen je Woche": "sg"
+    "Nummer": "4711"
+
   }
 ]
