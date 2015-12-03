@@ -12,19 +12,27 @@
 	</head>
 	<body>
 		<h1 class="clHeader">Aufwendungen je Woche</h1>
-		%for dict_i in dict_list:
-			<table id="idTable">
-				%for i in range(len(dict_i)):
-				<tr>
-					%if i == 0:
-						<th>Id</th><td>${dict_i["Id"]}</td>
-					%else:
-						<th>${i}. Woche</th><td>${dict_i["Woche"+str(i)]}</td>
-					%endif
-				</tr>
+		
+		<table>
+			<col>
+				%for dict_i in dict_list:
+					<td>
+					<table id="idAw">
+						%for i in range(len(dict_i)):
+						<tr>
+							%if i == 0:
+								<th>Id</th><td>${dict_i["Id"]}</td>
+							%else:
+								<th>${i}. Woche</th><td>${dict_i["Woche"+str(i)]}</td>
+							%endif
+						</tr>
+						%endfor
+					</table>
+					</td>
 				%endfor
-			</table>
-		%endfor
+			</col>		
+		</table>
+		
 		<div class="clButtons" id="idButtonArea">
 		<a href="/index">zurueck zur Startseite</a>
 		%if (len(dict_list) == 1):

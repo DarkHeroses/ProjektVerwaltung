@@ -34,7 +34,7 @@ def zaehlen():
 class Projekte_cl(object):
 #---------------------------------------
     css_addr="/Content/CSS/style.css"
-    frame=['PID','PName','PNr','PDesc','PTime','PMoney','PIDK','PWeek']
+    frame=['PID','PName','PNr','PDesc','PTime','PMoney','PIDK']
     framename=['Id','Bezeichnung','Nummer','Beschreibung','Bearbeitungszeitraum','Budget','Id des Kunden']
    
 
@@ -147,44 +147,75 @@ class Projekte_cl(object):
                     break  
                     
         if (found==True):
-           for i in range(len(self.frame)):
+            for i in range(len(self.frame)):
                 data[dict_in][self.framename[i]]=kwargs[self.frame[i]]
-           json_e =open('data/projektdaten.json','w')
-           json.dump(data,json_e)
-           json_e.close()
+            json_e =open('data/projektdaten.json','w')
+            json.dump(data,json_e)
+            json_e.close()
         else:
-           error_s="Kunden mit ID: "+ kwargs["PID"] +" nicht gefunden!"
-           raise cherrypy.HTTPError(404,error_s)
+            error_s="Kunden mit ID: "+ kwargs["PID"] +" nicht gefunden!"
+            raise cherrypy.HTTPError(404,error_s)
         return self.daten()
     edit_data.exposed=True
 
     #---------------------------------------------    
     def delete(self, DID):
     #---------------------------------------------
-        json_f = open('data/projektdaten.json')	
-        data = json.load(json_f, object_pairs_hook=OrderedDict)
-        json_f.close()
+        json_pj_f = open('data/projektdaten.json')	
+        data_pj = json.load(json_pj_f, object_pairs_hook=OrderedDict)
+        json_pj_f.close()
+        
+        json_aw_f = open('data/aufwendungsdaten.json')	
+        data_aw= json.load(json_aw_f, object_pairs_hook=OrderedDict)
+        json_aw_f.close()        
+        
 
         found = False
-
-        for dict_i in data:
+        
+        
+        for dict_i in data_aw:
             for entry_i in dict_i:
                 if  dict_i[entry_i]==DID:
-                    print("FOUND!!!!!!!!!")
-                    dict_del=data.index(dict_i)
+                    print("Aufwengung FOUND!!!!!!!!!")
+                    dict_del=data_aw.index(dict_i)
+                    found=True
+                    break
+        
+        if found ==True:
+            data_aw.pop(dict_del)
+        
+                    
+        json_e =open('data/aufwendungsdaten.json','w')
+        json.dump(data_aw,json_e)
+
+        json_e.close()
+        
+        found = False
+
+        
+        
+        
+
+        for dict_i in data_pj:
+            for entry_i in dict_i:
+                if  dict_i[entry_i]==DID:
+                    print("Projekt FOUND!!!!!!!!!")
+                    dict_del=data_pj.index(dict_i)
                     found=True
                     break
                 
+
+                
                     
         if found ==True:
-            data.pop(dict_del)
+            data_pj.pop(dict_del)
         else:
             error_s="Projekt mit ID: "+ kwargs["PID"] +" nicht gefunden!"
             raise cherrypy.HTTPError(404,error_s)
         
                     
         json_e =open('data/projektdaten.json','w')
-        json.dump(data,json_e)
+        json.dump(data_pj,json_e)
 
         json_e.close()
         return self.daten()

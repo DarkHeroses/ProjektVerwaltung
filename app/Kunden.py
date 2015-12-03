@@ -135,14 +135,14 @@ class Kunden_cl(object):
                     break  
                     
         if (found==True):
-           for i in range(len(self.frame)):
+            for i in range(len(self.frame)):
                 data[dict_in][self.framename[i]]=kwargs[self.frame[i]]
-           json_e =open('data/kundendaten.json','w')
-           json.dump(data,json_e)
-           json_e.close()
+            json_e =open('data/kundendaten.json','w')
+            json.dump(data,json_e)
+            json_e.close()
         else:
-           error_s="Kunden mit ID: "+ kwargs["PID"] +" nicht gefunden!"
-           raise cherrypy.HTTPError(404,error_s)
+            error_s="Kunden mit ID: "+ kwargs["PID"] +" nicht gefunden!"
+            raise cherrypy.HTTPError(404,error_s)
 
         return self.daten()
     edit_data.exposed=True

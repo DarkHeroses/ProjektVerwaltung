@@ -21,7 +21,43 @@
         padding: 5px;
         text-align: left;
     }
+	
+	#idAw {
+		#vertical-align: baseline;
+		position: page;
+		#float:right;
+		width: 30%;
+		top: 70px;
+		border: double;
+		#table-layout: auto;
+		margin: 1px;
+		padding: 1px;
+		overflow-y: auto;		
+		overflow-x: auto;		
+	}
 
+	#idAw th {
+        border-left: dashed;
+        padding: 5px;
+        text-align: center;
+    }
+	
+	#idAw tr {
+	#	vertical-align: baseline;
+    }
+
+    #idAw td {
+		border-top: solid;
+        border-left: solid;
+        padding: 5px;
+        text-align: left;
+		position: page;
+		#margin: 0;
+		
+    	
+	}
+	
+	
 
 .clHeader {
     color: white;
