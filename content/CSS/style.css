@@ -22,31 +22,31 @@
         text-align: left;
     }
 	
-	#idAw {
-		#vertical-align: baseline;
-		position: page;
-		#float:right;
+	.idAw {
+		
+		position:page;
 		width: 30%;
 		top: 70px;
 		border: double;
-		#table-layout: auto;
+		table-layout: fixed;
 		margin: 1px;
 		padding: 1px;
 		overflow-y: auto;		
 		overflow-x: auto;		
 	}
 
-	#idAw th {
+	.idAw th {
         border-left: dashed;
         padding: 5px;
         text-align: center;
     }
 	
-	#idAw tr {
-	#	vertical-align: baseline;
+	.idAw tr {
+		vertical-align: baseline;
     }
 
-    #idAw td {
+    .idAw td {
+        vertical-align: baseline;
 		border-top: solid;
         border-left: solid;
         padding: 5px;

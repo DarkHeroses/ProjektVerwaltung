@@ -1,4 +1,4 @@
-<!DOCTYPE HTML SYSTEM>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>${typ_s}</title>

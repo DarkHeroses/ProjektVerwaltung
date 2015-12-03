@@ -1,9 +1,9 @@
-<!DOCTYPE HTML SYSTEM>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Aufwendungen je Woche</title>
 
-		<style>
+		<style type="text/css">
 			@import url(${css_addr});
 		</style>
 
@@ -13,11 +13,10 @@
 	<body>
 		<h1 class="clHeader">Aufwendungen je Woche</h1>
 		
-		<table>
-			<col>
+
 				%for dict_i in dict_list:
-					<td>
-					<table id="idAw">
+				
+					<table class="clAw">
 						%for i in range(len(dict_i)):
 						<tr>
 							%if i == 0:
@@ -28,11 +27,8 @@
 						</tr>
 						%endfor
 					</table>
-					</td>
-				%endfor
-			</col>		
-		</table>
-		
+				
+				%endfor	
 		<div class="clButtons" id="idButtonArea">
 		<a href="/index">zurueck zur Startseite</a>
 		%if (len(dict_list) == 1):
